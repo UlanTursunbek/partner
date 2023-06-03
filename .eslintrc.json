@@ -4,7 +4,13 @@
   "rules": {
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
-    "newline-before-return": "error"
+    "newline-before-return": "error",
+    "import/no-anonymous-default-export": [
+      "error",
+      {
+        "allowObject": true
+      }
+    ]
   },
   "overrides": [
     // override "simple-import-sort" config
