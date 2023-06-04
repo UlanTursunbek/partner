@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "storybook dev -p 6006 -c ./config/storybook",
+    "build-storybook": "storybook build -c ./config/storybook"
   },
   "dependencies": {
     "@types/node": "20.2.5",
@@ -36,6 +36,8 @@
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-storybook": "^0.6.12",
     "storybook": "^7.0.18",
+    "tsconfig-paths-webpack-plugin": "^4.0.1",
+    "webpack": "^5.85.0",
     "webpack-merge": "^5.9.0"
   }
 }
