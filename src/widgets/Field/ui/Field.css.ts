@@ -3,7 +3,8 @@ import { vars } from 'app/styles/vars.css'
 
 export const container = style({
   display: 'flex',
-  flexDirection: 'column'
+  flexDirection: 'column',
+  width: '100%'
 })
 
 export const label = style({
@@ -15,7 +16,10 @@ export const workspace = style({
   border: vars.border.gray,
   marginTop: vars.space.medium,
   gap: vars.space.medium,
-  padding: vars.space.medium
+  padding: vars.space.medium,
+  minHeight: '24px',
+  alignItems: 'center',
+  borderRadius: vars.borderRadius.md
 })
 
 export const input = style({

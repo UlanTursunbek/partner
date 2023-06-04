@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { Typography } from 'widgets/Typography/index.tsx'
 
 import * as styles from './Field.css.ts'
 
@@ -22,7 +23,7 @@ export const Field = ({
 }: FieldProps) => {
   return (
     <div className={styles.container}>
-      <div className={styles.label}>{label}</div>
+      <Typography>{label}</Typography>
 
       <div className={styles.workspace}>
         {adornmentStart && <div>{adornmentStart}</div>}

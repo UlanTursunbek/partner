@@ -6,7 +6,7 @@ import { Field } from './Field'
 const meta: Meta<typeof Field> = {
   title: 'Example/Field',
   component: Field,
-  tags: ['autodocs'],
+
   argTypes: {}
 }
 
