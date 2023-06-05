@@ -10,7 +10,7 @@ export const Login = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <Typography component="h4">LOGIN</Typography>
+        <Typography component="h4">Login</Typography>
         <Field label="Email" type="email" />
 
         <Field

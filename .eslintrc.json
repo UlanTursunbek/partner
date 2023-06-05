@@ -1,6 +1,6 @@
 {
-  "extends": "next/core-web-vitals",
-  "plugins": ["react", "simple-import-sort", "prettier"],
+  "extends": ["next/core-web-vitals", "plugin:jsx-a11y/recommended"],
+  "plugins": ["react", "jsx-a11y", "simple-import-sort", "prettier"],
   "rules": {
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
