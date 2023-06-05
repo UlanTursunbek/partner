@@ -15,8 +15,8 @@ export const container = style({
   justifyContent: 'center',
   alignItems: 'center',
   maxWidth: vars.width[320],
-  borderRadius: vars.borderRadius.lg,
   gap: vars.space.medium,
   border: vars.border.gray,
-  padding: vars.space.medium
+  padding: vars.space.large,
+  margin: vars.space.medium
 })

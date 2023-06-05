@@ -18,8 +18,7 @@ export const workspace = style({
   gap: vars.space.medium,
   padding: vars.space.medium,
   minHeight: '24px',
-  alignItems: 'center',
-  borderRadius: vars.borderRadius.md
+  alignItems: 'center'
 })
 
 export const input = style({

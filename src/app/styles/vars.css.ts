@@ -49,6 +49,8 @@ export const vars = createGlobalTheme(':root', {
   },
   color: {
     primary: '#fff',
-    secondary: '#000'
+    secondary: '#000',
+    link: 'blue',
+    linkHover: 'darkgreen'
   }
 })
