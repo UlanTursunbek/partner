@@ -1,0 +1,11 @@
+import { Typography } from 'widgets/Typography'
+
+import * as styles from './Landing.css'
+
+export const Landing = () => {
+  return (
+    <div className={styles.wrapper}>
+      <Typography component="h4">Landing</Typography>
+    </div>
+  )
+}

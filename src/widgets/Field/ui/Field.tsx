@@ -4,6 +4,7 @@ import { Typography } from 'widgets/Typography/index.tsx'
 import * as styles from './Field.css.ts'
 
 interface FieldProps {
+  id: string
   label?: string
   adornmentStart?: ReactNode
   adornmentEnd?: ReactNode
@@ -15,6 +16,7 @@ interface FieldProps {
 }
 
 export const Field = ({
+  id,
   label,
   adornmentStart,
   adornmentEnd,
@@ -29,7 +31,7 @@ export const Field = ({
         {adornmentStart && <div>{adornmentStart}</div>}
 
         <input
-          id="input"
+          id={id}
           type={type}
           className={styles.input}
           placeholder={placeholder}

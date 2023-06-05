@@ -1,36 +1,30 @@
 import IconEyeOpen from 'shared/assets/Icons/IconEyeOpen.svg'
 import { routes } from 'shared/lib/routes'
 import { Button } from 'widgets/Button'
-import { ButtonIcon } from 'widgets/ButtonIcon'
 import { CustomLink } from 'widgets/CustomLink'
 import { Field } from 'widgets/Field'
 import { Typography } from 'widgets/Typography'
 
-import * as styles from './Login.css'
+import * as styles from './Register.css'
 
-export const Login = () => {
+export const Register = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <Typography component="h4">Login</Typography>
+        <Typography component="h4">Register</Typography>
         <Field id="email" label="Email" type="email" />
 
         <Field
           id="password"
           label="Password"
           type="password"
-          adornmentEnd={
-            <ButtonIcon>
-              <IconEyeOpen />
-            </ButtonIcon>
-          }
+          adornmentEnd={<IconEyeOpen />}
         />
-        <CustomLink href="">Forgot password?</CustomLink>
-        <Button variant="primary">Sign in</Button>
+        <Button variant="primary">Sign up</Button>
 
         <Typography>
-          Don&apos;t have an account yet?{' '}
-          <CustomLink href={routes.Register}>Sign up</CustomLink>
+          Already have an account?{' '}
+          <CustomLink href={routes.Login}>Log in</CustomLink>
         </Typography>
       </div>
     </div>
