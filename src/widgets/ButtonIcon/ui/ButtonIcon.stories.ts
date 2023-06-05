@@ -14,14 +14,6 @@ export default meta
 type Story = StoryObj<typeof ButtonIcon>
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary: Story = {
-  args: {
-    label: 'ButtonIcon'
-  }
-}
-
-export const Secondary: Story = {
-  args: {
-    label: 'ButtonIcon'
-  }
+export const Default: Story = {
+  args: {}
 }
