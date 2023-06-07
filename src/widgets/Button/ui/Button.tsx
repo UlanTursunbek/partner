@@ -5,7 +5,7 @@ import * as styles from './Button.css.ts'
 interface ButtonProps {
   children: ReactNode
   variant: 'primary' | 'secondary'
-  type?: 'button'
+  type?: 'button' | 'submit'
 }
 
 export const Button = ({
