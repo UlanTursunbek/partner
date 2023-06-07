@@ -1,13 +1,13 @@
 import { SubmitHandler, useForm } from 'react-hook-form'
-import signIn from 'app/firebase/signIn'
+import { useAuth } from 'app/providers/AuthProvider'
 import { useRouter } from 'next/router'
-import IconEyeOpen from 'shared/assets/Icons/IconEyeOpen.svg'
-import { routes } from 'shared/lib/routes'
-import { Button } from 'widgets/Button'
-import { ButtonIcon } from 'widgets/ButtonIcon'
-import { CustomLink } from 'widgets/CustomLink'
-import { Field } from 'widgets/Field'
-import { Typography } from 'widgets/Typography'
+import { IconEyeOpen } from 'shared/assets/Icons'
+import { routes } from 'shared/lib'
+import { Button } from 'shared/ui/Button'
+import { ButtonIcon } from 'shared/ui/ButtonIcon'
+import { CustomLink } from 'shared/ui/CustomLink'
+import { Field } from 'shared/ui/Field'
+import { Typography } from 'shared/ui/Typography'
 
 import * as styles from './Login.css'
 
@@ -23,6 +23,7 @@ export const Login = () => {
     formState: { errors }
   } = useForm<FieldsValue>()
   const router = useRouter()
+  const { signIn } = useAuth()
 
   const submitForm: SubmitHandler<FieldsValue> = async (data: FieldsValue) => {
     // event.preventDefault()

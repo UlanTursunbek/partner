@@ -1,5 +1,5 @@
 import type { ReactElement, ReactNode } from 'react'
-import { AuthContextProvider } from 'app/providers/AuthProvider'
+import { AuthContextProvider } from 'app/providers/AuthProvider/ui/AuthContextProvider'
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 import ProtectedPage from 'shared/lib/protectedPage'
