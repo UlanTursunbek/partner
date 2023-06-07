@@ -1,4 +1,4 @@
-import { Typography } from 'widgets/Typography'
+import { Typography } from 'shared/ui/Typography'
 
 import * as styles from './Landing.css'
 

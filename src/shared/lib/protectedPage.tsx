@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { useAuthContext } from 'app/providers/AuthProvider'
+import { useAuthContext } from 'app/providers/AuthProvider/ui/AuthContextProvider'
 import { useRouter } from 'next/navigation'
 
 import { routes } from './routes'
