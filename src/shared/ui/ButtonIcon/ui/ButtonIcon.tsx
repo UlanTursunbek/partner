@@ -4,7 +4,7 @@ import * as styles from './ButtonIcon.css.ts'
 
 interface ButtonProps {
   children: ReactNode
-  onClick: () => void
+  onClick?: () => void
 }
 
 export const ButtonIcon = ({ children, onClick }: ButtonProps) => {
