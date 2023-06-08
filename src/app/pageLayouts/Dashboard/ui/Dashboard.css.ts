@@ -3,7 +3,7 @@ import { vars } from 'app/styles/vars.css'
 
 export const wrapper = style({
   display: 'flex',
-  height: vars.height.fullScreen,
+  height: '100%',
   justifyContent: 'center',
   alignItems: 'center'
 })

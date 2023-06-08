@@ -30,13 +30,17 @@ export const vars = createGlobalTheme(':root', {
     black: '1px solid black'
   },
   width: {
+    0: '0px',
     320: '320px',
     full: '100%',
-    fullScreen: '100vw'
+    fullScreen: '100vw',
+    sidebar: '64px',
+    sidebarActive: '128px'
   },
   height: {
     full: '100%',
-    fullScreen: '100vh'
+    fullScreen: '100vh',
+    navbar: '64px'
   },
   borderRadius: {
     sm: '4px',
@@ -52,5 +56,14 @@ export const vars = createGlobalTheme(':root', {
     secondary: '#000',
     link: 'blue',
     linkHover: 'darkgreen'
+  },
+  shadow: {
+    bottom: '0px 2px 10px 0px rgba(0, 0, 0, 0.2)',
+    right: '10px 0px 10px -10px rgba(0, 0, 0, 0.2)'
+  },
+  zindex: {
+    0: '0',
+    1: '1',
+    10: '10'
   }
 })
