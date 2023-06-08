@@ -1,4 +1,5 @@
 import type { ReactElement, ReactNode } from 'react'
+import { MainLayout } from 'app/layout/MainLayout'
 import { AuthContextProvider } from 'app/providers/AuthProvider/ui/AuthContextProvider'
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
@@ -19,7 +20,9 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return (
     <AuthContextProvider>
-      <ProtectedPage>{getLayout(<Component {...pageProps} />)}</ProtectedPage>
+      <MainLayout>
+        <ProtectedPage>{getLayout(<Component {...pageProps} />)}</ProtectedPage>
+      </MainLayout>
     </AuthContextProvider>
   )
 }
