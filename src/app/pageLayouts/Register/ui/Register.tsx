@@ -1,5 +1,5 @@
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { addData, ICollection } from 'app/firestore'
+import { registerNewUser } from 'app/firestore/collections'
 import { useAuth } from 'app/providers/AuthProvider'
 import { useRouter } from 'next/router'
 import { IconEyeOpen } from 'shared/assets/Icons'
@@ -13,6 +13,7 @@ import { Typography } from 'shared/ui/Typography'
 import * as styles from './Register.css'
 
 interface FieldsValue {
+  username: string
   email: string
   password: string
 }
@@ -36,7 +37,8 @@ export const Register = () => {
 
     // else successful
     if (result) {
-      await addData(ICollection.USERS, result.user.uid, {
+      await registerNewUser(result.user.uid, {
+        username: data.username,
         email: data.email,
         password: data.password
       })
@@ -50,6 +52,15 @@ export const Register = () => {
       <div className={styles.container}>
         <form onSubmit={handleSubmit(submitForm)}>
           <Typography component="h4">Register</Typography>
+
+          <Field
+            id="username"
+            label="Username"
+            type="text"
+            required
+            {...register('username')}
+          />
+
           <Field
             id="email"
             label="Email"

@@ -1,7 +1,12 @@
 // Import the functions you need from the SDKs you need
 import { getApps, initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
-import { getFirestore } from 'firebase/firestore'
+import {
+  collection,
+  CollectionReference,
+  DocumentData,
+  getFirestore
+} from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -18,6 +23,10 @@ let firebase_app =
   getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0]
 
 const firebaseAuth = getAuth(firebase_app)
-export const firebaseDB = getFirestore(firebase_app)
+export const fireStore = getFirestore(firebase_app)
 
+// This is just a helper to add the type to the db responses
+export const createCollection = <T = DocumentData>(collectionName: string) => {
+  return collection(fireStore, collectionName) as CollectionReference<T>
+}
 export default firebaseAuth

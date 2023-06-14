@@ -7,8 +7,8 @@ import {
   ReactNode,
   Ref
 } from 'react'
+import { Typography } from 'shared/ui/Typography/index.tsx'
 
-// import { Typography } from 'widgets/Typography/index.tsx'
 import * as styles from './Field.css.ts'
 
 type SupportedTagNames = 'input' | 'textarea' | FC<Record<string, any>>
@@ -44,7 +44,7 @@ const FieldWithRef = <T extends SupportedTagNames = typeof DEFAULT_TAG>(
 ) => {
   return (
     <div className={styles.container}>
-      {/* <Typography>{label}</Typography> */}
+      <Typography>{label}</Typography>
 
       <div className={styles.workspace}>
         {adornmentStart && <div>{adornmentStart}</div>}

@@ -1,13 +1,11 @@
-import { useContext } from 'react'
+import firebaseAuth from 'app/firebase/config'
 
-import { AuthContext } from './authContext'
 import signIn from './signIn'
 import Logout from './signOut'
 import signUp from './signUp'
 
 export const useAuth = () => {
-  const useAuthContext = () => useContext(AuthContext)
-  const user = useAuthContext()
+  const user = firebaseAuth.currentUser
 
   return { user, signIn, signUp, Logout }
 }

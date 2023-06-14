@@ -1,5 +1,3 @@
-import addData from './lib/addData'
-import getData from './lib/getData'
-import { ICollection } from './lib/types'
+import { ICollection } from './types'
 
-export { addData, getData, ICollection }
+export { ICollection }
