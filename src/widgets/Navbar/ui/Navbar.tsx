@@ -1,13 +1,15 @@
 import { useState } from 'react'
+import { useCurrentUser } from 'shared/api'
 import { Logo, Menu } from 'shared/assets/Icons'
 import { ButtonIcon } from 'shared/ui/ButtonIcon'
-import { Portal } from 'shared/ui/Portal'
 import { Typography } from 'shared/ui/Typography'
 import { Sidebar } from 'widgets/Sidebar'
 
 import * as styles from './Navbar.css'
 
 export const Navbar = () => {
+  const currentUser = useCurrentUser()
+
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false)
 
   const toggleSidebar = () => {
@@ -22,7 +24,7 @@ export const Navbar = () => {
       <div className={styles.right}>
         <div className={styles.block}>
           <div className={styles.user}>
-            <Typography>username</Typography>
+            <Typography>{currentUser.username}</Typography>
           </div>
 
           <ButtonIcon onClick={toggleSidebar}>
