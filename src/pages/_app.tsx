@@ -4,11 +4,13 @@ import { AuthContextProvider } from 'app/providers/AuthProvider/ui/AuthContextPr
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 import ProtectedPage from 'shared/lib/protectedPage'
+import { Policy, withPolicies } from 'shared/lib/withPolicy'
 
 import 'app/styles/index.css'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-  getLayout?: (page: ReactElement) => ReactNode
+  getLayout?: (page: ReactElement) => ReactElement
+  policies?: Policy[]
 }
 
 type AppPropsWithLayout = AppProps & {
@@ -18,10 +20,12 @@ type AppPropsWithLayout = AppProps & {
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page)
 
+  const policies = [...(Component.policies || [])]
+
   return (
     <AuthContextProvider>
       <MainLayout>
-        <ProtectedPage>{getLayout(<Component {...pageProps} />)}</ProtectedPage>
+        {withPolicies(policies)(getLayout(<Component {...pageProps} />))}
       </MainLayout>
     </AuthContextProvider>
   )

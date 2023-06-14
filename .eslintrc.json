@@ -5,6 +5,7 @@
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "newline-before-return": "error",
+    "no-unused-vars": "warn",
     "import/no-anonymous-default-export": [
       "error",
       {
