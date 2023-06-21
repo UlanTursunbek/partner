@@ -9,12 +9,6 @@ export const vars = createGlobalTheme(':root', {
     '1/2': '50%',
     '1/5': '20%'
   },
-  //   color: {
-  //     white: '#fff',
-  //     black: '#000',
-  //     orange: '#FFA500',
-  //     primary: '#764abc'
-  //   },
   fontFamily: {},
   fontSize: {
     small: '8px',
@@ -53,10 +47,10 @@ export const vars = createGlobalTheme(':root', {
     transparent: 'transparent'
   },
   color: {
-    primary: '#fff',
-    secondary: '#000',
-    link: 'blue',
-    linkHover: 'darkgreen'
+    brand: '#162838',
+    secondary: '#cc1d5e',
+    base: '#ffffff',
+    text: '#666666'
   },
   shadow: {
     bottom: '0px 2px 10px 0px rgba(0, 0, 0, 0.2)',

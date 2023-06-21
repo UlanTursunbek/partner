@@ -5,38 +5,31 @@ import * as styles from './Typography.css'
 type TagNameMap =
   | 'h1'
   | 'p'
-  //   | 'div'
-  //   | 'span'
-  //   | 'label'
-  //   | 'em'
-  //   | 'strong'
+  | 'span'
+  | 'label'
+  | 'strong'
   | 'h2'
   | 'h3'
   | 'h4'
-//   | 'h5'
-//   | 'a'
-//   | 'time'
+  | 'h5'
+  | 'a'
+  | 'time'
 
-const DEFAULT_TAG: TagNameMap = 'p'
-
-interface TypographyProps {
-  component?: TagNameMap | typeof DEFAULT_TAG
+interface ITypographyProps {
+  variant: TagNameMap
   children: ReactNode
 }
 
-export const TypographyWithRef = ({
-  component = DEFAULT_TAG,
-  children
-}: TypographyProps) => {
-  return createElement(
-    component || DEFAULT_TAG,
-    { className: styles.typograpy[component] },
-    children
+export const Typography = ({
+  variant = 'p',
+  children,
+  ...props
+}: ITypographyProps) => {
+  const Component = variant ? variant : 'p'
+
+  return (
+    <Component {...props} className={styles.typograpy[variant]}>
+      {children}
+    </Component>
   )
 }
-
-export const Typography = forwardRef(TypographyWithRef) as <
-  T extends TagNameMap = typeof DEFAULT_TAG
->(
-  props: TypographyProps & { ref?: Ref<HTMLElementTagNameMap[T]> }
-) => ReactElement
