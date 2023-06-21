@@ -4,8 +4,8 @@ import { format } from 'date-fns'
 import { formatDuration, intervalToDuration } from 'date-fns'
 import { updateCurrentUser } from 'firebase/auth'
 import { useCurrentUser } from 'shared/api'
-import { Brick } from 'shared/ui/Brick'
 import { Button } from 'shared/ui/Button'
+import { Card } from 'shared/ui/Card'
 import { DatePicker } from 'shared/ui/DatePicker'
 import { Typography } from 'shared/ui/Typography'
 
@@ -45,7 +45,7 @@ export const DatingCounter = ({ datingStart }: IDatingCounterProps) => {
   }
 
   return (
-    <Brick>
+    <Card>
       {currentUser?.datingStart ? (
         <Typography>
           You are dating for {parseDatingTime(currentUser.datingStart)}
@@ -63,7 +63,7 @@ export const DatingCounter = ({ datingStart }: IDatingCounterProps) => {
           )}
         </div>
       )}
-    </Brick>
+    </Card>
   )
 }
 function updateUserInfo(uid: string, arg1: { datingStart: number }) {

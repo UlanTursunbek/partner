@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Brick } from './Brick'
+import { Card } from './Card'
 
-const meta: Meta<typeof Brick> = {
-  title: 'Example/Brick',
-  component: Brick,
+const meta: Meta<typeof Card> = {
+  title: 'Example/Card',
+  component: Card,
   argTypes: {}
 }
 
 export default meta
-type Story = StoryObj<typeof Brick>
+type Story = StoryObj<typeof Card>
 
 export const Default: Story = {
   args: { children: <div>Content</div> }
