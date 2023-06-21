@@ -4,14 +4,14 @@ import * as styles from './Button.css.ts'
 
 interface ButtonProps {
   children: ReactNode
-  variant: 'primary' | 'secondary'
+  variant: 'primary' | 'secondary' | 'outline' | 'ghost'
   type?: 'button' | 'submit'
   onClick?: () => void
 }
 
 export const Button = ({
   children,
-  variant = 'primary',
+  variant,
   type = 'button',
   onClick
 }: ButtonProps) => {
