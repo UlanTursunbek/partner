@@ -1,5 +1,5 @@
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { registerNewUser } from 'app/firestore/collections'
+import { registerNewUser } from 'app/firestore/hooks'
 import { useAuth } from 'app/providers/AuthProvider'
 import { useRouter } from 'next/router'
 import { IconEyeOpen } from 'shared/assets/Icons'
@@ -21,8 +21,8 @@ interface FieldsValue {
 export const Register = () => {
   const {
     register,
-    handleSubmit,
-    formState: { errors }
+    handleSubmit
+    // formState: { errors }
   } = useForm<FieldsValue>()
 
   const router = useRouter()
@@ -35,13 +35,15 @@ export const Register = () => {
       return alert(error)
     }
 
-    // else successful
     if (result) {
       await registerNewUser(result.user.uid, {
+        id: result.user.uid,
         username: data.username,
         email: data.email,
         password: data.password
       })
+
+      alert('Successfully registered')
 
       router.push(routes.Dashboard)
     }

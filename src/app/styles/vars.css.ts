@@ -1,4 +1,4 @@
-import { createGlobalTheme, fontFace } from '@vanilla-extract/css'
+import { createGlobalTheme } from '@vanilla-extract/css'
 
 export const vars = createGlobalTheme(':root', {
   space: {
@@ -27,7 +27,8 @@ export const vars = createGlobalTheme(':root', {
   border: {
     gray: '1px solid gray',
     active: '1px solid blue',
-    black: '1px solid black'
+    black: '1px solid black',
+    brick: '3px solid red'
   },
   width: {
     0: '0px',
@@ -59,7 +60,8 @@ export const vars = createGlobalTheme(':root', {
   },
   shadow: {
     bottom: '0px 2px 10px 0px rgba(0, 0, 0, 0.2)',
-    right: '10px 0px 10px -10px rgba(0, 0, 0, 0.2)'
+    right: '10px 0px 10px -10px rgba(0, 0, 0, 0.2)',
+    full: 'rgba(149, 157, 165, 0.2) 0px 8px 24px'
   },
   zindex: {
     0: '0',

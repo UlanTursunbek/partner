@@ -24,7 +24,7 @@ export const Navbar = () => {
       <div className={styles.right}>
         <div className={styles.block}>
           <div className={styles.user}>
-            <Typography>{currentUser.username}</Typography>
+            <Typography>{currentUser?.username}</Typography>
           </div>
 
           <ButtonIcon onClick={toggleSidebar}>

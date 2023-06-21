@@ -6,15 +6,17 @@ interface ButtonProps {
   children: ReactNode
   variant: 'primary' | 'secondary'
   type?: 'button' | 'submit'
+  onClick?: () => void
 }
 
 export const Button = ({
   children,
   variant = 'primary',
-  type = 'button'
+  type = 'button',
+  onClick
 }: ButtonProps) => {
   return (
-    <button type={type} className={styles.button[variant]}>
+    <button type={type} className={styles.button[variant]} onClick={onClick}>
       {children}
     </button>
   )

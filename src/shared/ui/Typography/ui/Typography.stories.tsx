@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import IconEyeOpen from 'shared/assets/Icons/IconEyeOpen.svg'
 
 import { Typography } from './Typography'
 

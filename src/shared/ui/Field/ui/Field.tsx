@@ -34,9 +34,9 @@ const FieldWithRef = <T extends SupportedTagNames = typeof DEFAULT_TAG>(
     label,
     adornmentStart,
     adornmentEnd,
-    extra,
+
     error,
-    className,
+
     component,
     ...props
   }: Props<T>,

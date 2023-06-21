@@ -5,5 +5,6 @@ export const wrapper = style({
   display: 'flex',
   height: '100%',
   justifyContent: 'center',
-  alignItems: 'center'
+  alignItems: 'center',
+  padding: vars.space.large
 })
