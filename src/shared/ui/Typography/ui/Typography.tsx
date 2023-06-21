@@ -16,7 +16,7 @@ type TagNameMap =
   | 'time'
 
 interface ITypographyProps {
-  variant: TagNameMap
+  variant?: TagNameMap
   children: ReactNode
 }
 

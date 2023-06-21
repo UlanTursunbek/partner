@@ -53,7 +53,7 @@ export const Register = () => {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <form onSubmit={handleSubmit(submitForm)}>
-          <Typography component="h4">Register</Typography>
+          <Typography variant="h4">Register</Typography>
 
           <Field
             id="username"
