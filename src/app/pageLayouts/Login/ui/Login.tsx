@@ -19,24 +19,20 @@ interface FieldsValue {
 export const Login = () => {
   const {
     register,
-    handleSubmit,
-    formState: { errors }
+    handleSubmit
+    // formState: { errors }
   } = useForm<FieldsValue>()
   const router = useRouter()
   const { signIn } = useAuth()
 
   const submitForm: SubmitHandler<FieldsValue> = async (data: FieldsValue) => {
-    // event.preventDefault()
-    console.log(data)
-
-    const { result, error } = await signIn(data.email, data.password)
+    const { error } = await signIn(data.email, data.password)
 
     if (error) {
       return alert(error)
     }
 
-    // else successful
-    alert(result)
+    alert('Login successful')
 
     router.push(routes.Dashboard)
   }

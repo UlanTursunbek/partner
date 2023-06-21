@@ -24,10 +24,10 @@ interface TypographyProps {
   children: ReactNode
 }
 
-export const TypographyWithRef = (
-  { component = DEFAULT_TAG, children }: TypographyProps,
-  ref: Ref<HTMLElement>
-) => {
+export const TypographyWithRef = ({
+  component = DEFAULT_TAG,
+  children
+}: TypographyProps) => {
   return createElement(
     component || DEFAULT_TAG,
     { className: styles.typograpy[component] },

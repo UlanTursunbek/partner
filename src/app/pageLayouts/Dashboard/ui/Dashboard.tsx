@@ -1,11 +1,14 @@
-import { Typography } from 'shared/ui/Typography'
+import { useCurrentUser } from 'shared/api'
+import { DatingCounter } from 'widgets/DatingCounter'
 
 import * as styles from './Dashboard.css'
 
 export const Dashboard = () => {
+  const currentUser = useCurrentUser()
+
   return (
     <div className={styles.wrapper}>
-      <Typography component="h4">Dashboard</Typography>
+      <DatingCounter datingStart={currentUser?.datingStart} />
     </div>
   )
 }

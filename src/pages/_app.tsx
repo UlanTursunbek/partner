@@ -1,9 +1,9 @@
-import type { ReactElement, ReactNode } from 'react'
+import type { ReactElement } from 'react'
 import { MainLayout } from 'app/layout/MainLayout'
 import { AuthContextProvider } from 'app/providers/AuthProvider/ui/AuthContextProvider'
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
-import { Policy, withPolicies } from 'shared/lib/withPolicy'
+import { Policy, withPolicies } from 'shared/lib'
 
 import 'app/styles/index.css'
 

@@ -1,3 +1,4 @@
 import { routes } from './routes'
+import { Policy, withPolicies } from './withPolicies'
 
-export { routes }
+export { type Policy, routes, withPolicies }
