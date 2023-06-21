@@ -1,13 +1,9 @@
-export enum ICollection {
-  USERS = 'users'
-}
+export type Collection = 'users'
 
-export interface ICurrentUser {
+export interface IUser {
   username: string
-}
-
-export interface IRegisterUser {
-  username: string
+  datingStart?: number | undefined
+  id: string
   email: string
   password: string
 }
