@@ -26,7 +26,7 @@ const config: StorybookConfig = {
     config.plugins?.push(new VanillaExtractPlugin())
 
     // @TODO handle custom plugins for svg
-    config.module?.rules?.push(svgLoader)
+    config.module?.rules?.unshift(svgLoader)
 
     return config
   }

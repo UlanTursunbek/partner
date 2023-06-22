@@ -1,7 +1,7 @@
-import Close from './Close.svg'
-import IconEyeClose from './IconEyeClose.svg'
-import IconEyeOpen from './IconEyeOpen.svg'
-import Logo from './Logo.svg'
-import Menu from './Menu.svg'
+import { IconClose } from './ui/IconClose'
+import { IconEyeClose } from './ui/IconEyeClose'
+import { IconEyeOpen } from './ui/IconEyeOpen'
+import { Logo } from './ui/Logo'
+import { Menu } from './ui/Menu'
 
-export { Close, IconEyeClose, IconEyeOpen, Logo, Menu }
+export { IconClose, IconEyeClose, IconEyeOpen, Logo, Menu }

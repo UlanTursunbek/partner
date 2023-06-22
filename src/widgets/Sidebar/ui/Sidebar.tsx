@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 
 import clsx from 'clsx'
-import { Close } from 'shared/assets/Icons'
+import { IconClose } from 'shared/assets/Icons'
 import { ButtonIcon } from 'shared/ui/ButtonIcon'
 
 import * as styles from './Sidebar.css'
@@ -28,7 +28,7 @@ export const Sidebar = ({ open, toggleSidebar }: SidebarProps) => {
         onClick={handleMenuClick}
       >
         <ButtonIcon onClick={toggleSidebar}>
-          <Close />
+          <IconClose />
         </ButtonIcon>
 
         <div>navigation</div>
