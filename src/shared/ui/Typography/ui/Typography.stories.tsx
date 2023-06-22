@@ -12,5 +12,5 @@ export default meta
 type Story = StoryObj<typeof Typography>
 
 export const Default: Story = {
-  args: { component: 'h1', children: 'Sample text' }
+  args: { variant: 'h1', children: 'Sample' }
 }

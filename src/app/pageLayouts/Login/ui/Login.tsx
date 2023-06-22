@@ -41,7 +41,7 @@ export const Login = () => {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <form onSubmit={handleSubmit(submitForm)}>
-          <Typography component="h4">Login</Typography>
+          <Typography variant="h4">Login</Typography>
           <Field
             id="email"
             label="Email"

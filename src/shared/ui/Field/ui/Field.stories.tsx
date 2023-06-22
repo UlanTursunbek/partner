@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import IconEyeOpen from 'shared/assets/Icons/IconEyeOpen.svg'
+import { IconEyeOpen } from 'shared/assets/Icons'
+import { ButtonIcon } from 'shared/ui/ButtonIcon'
 
 import { Field } from './Field'
 
@@ -23,7 +24,15 @@ export const Default: Story = {
 export const WithIcons: Story = {
   args: {
     label: 'With Icon',
-    adornmentStart: <IconEyeOpen />,
-    adornmentEnd: <IconEyeOpen />
+    adornmentStart: (
+      <ButtonIcon disabled>
+        <IconEyeOpen />
+      </ButtonIcon>
+    ),
+    adornmentEnd: (
+      <ButtonIcon>
+        <IconEyeOpen />
+      </ButtonIcon>
+    )
   }
 }

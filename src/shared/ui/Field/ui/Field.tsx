@@ -1,73 +1,54 @@
-import {
-  ComponentPropsWithoutRef,
-  createElement,
-  FC,
-  forwardRef,
-  ReactElement,
-  ReactNode,
-  Ref
-} from 'react'
+import { ReactNode } from 'react'
 import { Typography } from 'shared/ui/Typography/index.tsx'
 
 import * as styles from './Field.css.ts'
 
-type SupportedTagNames = 'input' | 'textarea' | FC<Record<string, any>>
+type SupportedTagNames = 'input' | 'textarea'
 
-const DEFAULT_TAG = 'input'
+export interface IInputProps {
+  id: string
+  adornmentStart?: ReactNode
+  adornmentEnd?: ReactNode
+  label?: ReactNode
+  error?: string
+  disabled?: boolean
+  readOnly?: boolean
+  component?: SupportedTagNames
+  className?: string
+  placeholder?: string
+  type?: string
+}
+export const Field = ({
+  id,
+  label,
+  adornmentStart,
+  adornmentEnd,
+  error,
+  component,
+  placeholder,
+  readOnly,
+  type = 'text',
+  ...props
+}: IInputProps) => {
+  const Component = component ? component : 'input'
 
-export type Props<T extends SupportedTagNames = typeof DEFAULT_TAG> =
-  ComponentPropsWithoutRef<T> & {
-    id: string
-    adornmentStart?: ReactNode
-    adornmentEnd?: ReactNode
-    label?: ReactNode
-    extra?: ReactNode
-    error?: string
-    disabled?: boolean
-    readOnly?: boolean
-    component?: T
-    className?: string
-  }
-const FieldWithRef = <T extends SupportedTagNames = typeof DEFAULT_TAG>(
-  {
-    id,
-    label,
-    adornmentStart,
-    adornmentEnd,
-
-    error,
-
-    component,
-    ...props
-  }: Props<T>,
-  ref: Ref<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-) => {
   return (
     <div className={styles.container}>
       <Typography>{label}</Typography>
 
       <div className={styles.workspace}>
         {adornmentStart && <div>{adornmentStart}</div>}
-
-        {createElement(component || DEFAULT_TAG, {
-          ref,
-          className: styles.input,
-          id,
-          name: id,
-          'aria-invalid': error ? 'true' : 'false',
-          ...props
-        })}
+        <Component
+          {...props}
+          className={styles.input}
+          id={id}
+          placeholder={placeholder}
+          readOnly={readOnly}
+          type={type}
+        />
 
         {adornmentEnd && <div>{adornmentEnd}</div>}
       </div>
     </div>
   )
 }
-
-export const Field = forwardRef(FieldWithRef) as <
-  T extends SupportedTagNames = typeof DEFAULT_TAG
->(
-  props: Props<T> & {
-    ref?: Ref<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  }
-) => ReactElement

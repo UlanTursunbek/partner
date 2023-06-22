@@ -1,11 +1,11 @@
 import { ReactNode } from 'react'
 
-import * as styles from './Brick.css'
+import * as styles from './Card.css'
 
-interface BrickProps {
+interface CardProps {
   children: ReactNode
 }
 
-export const Brick = ({ children }: BrickProps) => {
+export const Card = ({ children }: CardProps) => {
   return <div className={styles.wrapper}>{children}</div>
 }
