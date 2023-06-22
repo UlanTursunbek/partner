@@ -24,5 +24,8 @@ export const workspace = style({
 export const input = style({
   border: 'none',
   width: '100%',
-  ':focus': { outline: 'none' }
+  backgroundColor: vars.bgColor.primary,
+  ':focus': {
+    outline: 'none'
+  }
 })
