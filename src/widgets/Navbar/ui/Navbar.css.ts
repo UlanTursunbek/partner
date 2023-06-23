@@ -1,4 +1,5 @@
 import { style } from '@vanilla-extract/css'
+import { globalColors } from 'app/styles/theme.css'
 import { vars } from 'app/styles/vars.css'
 
 export const header = style({
@@ -9,7 +10,8 @@ export const header = style({
   paddingLeft: vars.space.medium,
   paddingRight: vars.space.medium,
   boxShadow: vars.shadow.bottom,
-  height: vars.height.navbar
+  height: vars.height.navbar,
+  backgroundColor: globalColors.base
 })
 
 export const logo = style({

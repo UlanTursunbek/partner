@@ -1,6 +1,6 @@
 import { SVGAttributes } from 'react'
 
-export const Logo = (props: SVGAttributes<SVGElement>) => {
+export const IconLogo = (props: SVGAttributes<SVGElement>) => {
   return (
     <svg
       viewBox="0 0 83 114"
@@ -20,7 +20,7 @@ export const Logo = (props: SVGAttributes<SVGElement>) => {
         rx="14.5"
         transform="rotate(-45 -4.19849 59.5)"
         stroke="currentColor"
-        stroke-width="3"
+        strokeWidth="3"
       />
       <rect
         x="27.1213"
@@ -30,10 +30,10 @@ export const Logo = (props: SVGAttributes<SVGElement>) => {
         rx="14.5"
         transform="rotate(-45 27.1213 59.8198)"
         stroke="currentColor"
-        stroke-width="3"
+        strokeWidth="3"
       />
-      <circle cx="25" cy="11" r="9.5" stroke="currentColor" stroke-width="3" />
-      <circle cx="57" cy="11" r="9.5" stroke="currentColor" stroke-width="3" />
+      <circle cx="25" cy="11" r="9.5" stroke="currentColor" strokeWidth="3" />
+      <circle cx="57" cy="11" r="9.5" stroke="currentColor" strokeWidth="3" />
     </svg>
   )
 }

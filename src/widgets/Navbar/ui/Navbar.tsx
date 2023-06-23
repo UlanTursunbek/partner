@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { useCurrentUser } from 'shared/api'
-import { Logo, Menu } from 'shared/assets/Icons'
+import { IconLogo, IconMenu } from 'shared/assets/Icons'
 import { ButtonIcon } from 'shared/ui/ButtonIcon'
 import { Typography } from 'shared/ui/Typography'
 import { Sidebar } from 'widgets/Sidebar'
+import { ThemeButton } from 'widgets/ThemeButton'
 
 import * as styles from './Navbar.css'
 
@@ -19,8 +20,9 @@ export const Navbar = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Logo />
+        <IconLogo />
       </div>
+      <ThemeButton />
       <div className={styles.right}>
         <div className={styles.block}>
           <div className={styles.user}>
@@ -28,7 +30,7 @@ export const Navbar = () => {
           </div>
 
           <ButtonIcon onClick={toggleSidebar}>
-            <Menu />
+            <IconMenu />
           </ButtonIcon>
         </div>
       </div>
