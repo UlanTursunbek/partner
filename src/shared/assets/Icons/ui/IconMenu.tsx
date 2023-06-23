@@ -1,6 +1,6 @@
 import { SVGAttributes } from 'react'
 
-export const Menu = (props: SVGAttributes<SVGElement>) => {
+export const IconMenu = (props: SVGAttributes<SVGElement>) => {
   return (
     <svg
       viewBox="0 0 24 24"

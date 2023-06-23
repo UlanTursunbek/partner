@@ -1,6 +1,6 @@
 import { SVGAttributes } from 'react'
 
-export const Logo = (props: SVGAttributes<SVGElement>) => {
+export const IconLogo = (props: SVGAttributes<SVGElement>) => {
   return (
     <svg
       viewBox="0 0 83 114"
