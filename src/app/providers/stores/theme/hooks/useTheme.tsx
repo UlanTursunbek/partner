@@ -12,5 +12,7 @@ export const useTheme = () => {
     localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme)
   }
 
-  return { theme, toggleTheme }
+  const globalTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY)
+
+  return { globalTheme, toggleTheme }
 }

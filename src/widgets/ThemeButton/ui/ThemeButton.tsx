@@ -5,11 +5,11 @@ import { ButtonIcon } from 'shared/ui/ButtonIcon/index.tsx'
 interface ThemeButtonProps {}
 
 export const ThemeButton = ({}: ThemeButtonProps) => {
-  const { theme, toggleTheme } = useTheme()
+  const { globalTheme, toggleTheme } = useTheme()
 
   return (
     <ButtonIcon onClick={toggleTheme}>
-      {theme === 'light' ? <IconThemeLight /> : <IconThemeDark />}
+      {globalTheme === 'light' ? <IconThemeLight /> : <IconThemeDark />}
     </ButtonIcon>
   )
 }

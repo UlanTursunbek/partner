@@ -10,10 +10,10 @@ interface IMainLayouProps {
 }
 
 export const MainLayout = ({ children }: IMainLayouProps) => {
-  const { theme } = useTheme()
+  const { globalTheme } = useTheme()
 
   return (
-    <div className={theme === Theme.LIGHT ? darkTheme : lightTheme}>
+    <div className={globalTheme === Theme.LIGHT ? darkTheme : lightTheme}>
       <Navbar />
       <div className={styles.container}>{children}</div>
     </div>
