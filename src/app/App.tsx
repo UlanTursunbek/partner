@@ -1,6 +1,8 @@
 import { Route, Routes } from 'react-router-dom'
+import { Login } from 'pages/Login'
 import { Main } from 'pages/Main'
 import { NotFound } from 'pages/NotFound'
+import { Register } from 'pages/Register'
 import { ShoppingList } from 'pages/ShoppingList'
 import { MainLayout } from 'widgets/Layout'
 
@@ -10,6 +12,15 @@ export const App = () => {
   return (
     <MainLayout>
       <Routes>
+        <Route
+          path={routes.authLogin}
+          element={<Login />}
+        />
+        <Route
+          path={routes.authRegister}
+          element={<Register />}
+        />
+
         <Route path={routes.home} element={<Main />} />
         <Route
           path={routes.shoppingList}

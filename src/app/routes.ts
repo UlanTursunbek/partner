@@ -5,4 +5,6 @@ interface Routes {
 export const routes: Routes = {
   home: '/',
   shoppingList: '/shopping-list',
+  authLogin: '/auth/login',
+  authRegister: '/auth/register',
 }
