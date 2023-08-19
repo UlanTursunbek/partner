@@ -1,10 +1,5 @@
 import { ReactNode } from 'react'
-import {
-  Center,
-  Grid,
-  GridItem,
-  Heading,
-} from '@chakra-ui/react'
+import { Grid, GridItem, Heading } from '@chakra-ui/react'
 
 import { Sidebar } from './Sidebar'
 
